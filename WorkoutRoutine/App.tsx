@@ -1,39 +1,45 @@
 import React from "react";
 import { useState } from "react";
-import { Button, Text, View } from "react-native";
+import { FlatList, StyleSheet, TextInput, Text, View } from "react-native";
 
-function Cat(cat) {
-  const [isHungry, setIsHungry] = useState(true)
-  const [isTired, setIsTired] = useState(true)
+import Set from "./src/app/Set"
+import { SetType } from "./src/app/SetType"
+import Exercise from "./src/app/Exercise"
+
+function MainScreen() {
+  return (
+    <View style={styles.container}>
+      <FlatList
+        data={[
+          {key: new Set(SetType.Warmup, new Exercise("Bicep Curl"), 10, 8)}
+        ]}
+        renderItem={({item}) => SetViewHolder(item.key)}
+      />
+    </View>
+  )
+}
+
+function SetViewHolder(set: Set) {
 
   return (
-    <View>
-      <Text>
-        I am {cat.name}, and I am {isHungry ? "hungry" : "full"} and {isTired ? "tired" : "rested"}!
-      </Text>
-      <Button
-        onPress={() => {
-          setIsHungry(false);
-        }}
-        disabled={!isHungry}
-        title={isHungry ? "Pour me some milk, please!" : "Thank you!"}
-      />
-      <Button
-        onPress={() => {
-          setIsTired(false)
-        }}
-        disabled={!isTired}
-        title={isTired ? "Put me to bed!" : "Meow!"}
-        />
+    <View style={styles.item}>
+      <Text>{set.type}</Text>
+      <Text>{set.mass}</Text>
+      <Text>{set.reps}</Text>
     </View>
   );
 }
 
-export default function Cafe() {
-  return (
-    <>
-      <Cat name="Munkustrap" />
-      <Cat name="Spot" />
-    </>
-  );
-}
+const styles = StyleSheet.create({
+  container: {
+   flex: 1,
+   paddingTop: 22
+  },
+  item: {
+    padding: 10,
+    fontSize: 18,
+    height: 44,
+  },
+})
+
+export default MainScreen
