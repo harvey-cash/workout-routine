@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "73277378190",
+    "firebase_url": "https://workout-routine-8e63c.firebaseio.com",
+    "project_id": "workout-routine-8e63c",
+    "storage_bucket": "workout-routine-8e63c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:73277378190:android:eea51e3638ccf1adcf83df",
+        "android_client_info": {
+          "package_name": "cash.harvey.workoutroutine"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "73277378190-bhvbr9j0aefd20u1lf84jer02bm6d74v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "cash.harvey.workoutroutine",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "73277378190-ushnptej0vvg75ltolo235mpb46fte77.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5EmMkHC-6eXMXcd2faw_KB0XQds6vt08"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "73277378190-ushnptej0vvg75ltolo235mpb46fte77.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

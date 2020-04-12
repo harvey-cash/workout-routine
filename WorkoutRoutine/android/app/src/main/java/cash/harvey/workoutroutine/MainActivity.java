@@ -1,4 +1,4 @@
-package com.workoutroutine;
+package cash.harvey.workoutroutine;
 
 import com.facebook.react.ReactActivity;
 
